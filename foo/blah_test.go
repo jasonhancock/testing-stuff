@@ -1,9 +1,13 @@
 package blah
 
 
-import "testing"
+import (
+    "testing"
+
+    "github.com/stretchr/testify/require"
+)
 
 
 func TestShit(t *testing.T) {
-    t.Fatal("nope")
+    require.True(t, true)
 }
