@@ -1,10 +1,10 @@
-name: Greet Everyone
+name: Tests
 # This workflow is triggered on pushes to the repository.
 on: [pull_request]
 
 jobs:
   build:
-    name: Greeting
+    name: Lint and Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -12,3 +12,9 @@ jobs:
       - run: pwd
       - run: sudo apt-get install -y yamllint make
       - run: make lint
+      - name: Setup Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.14.x'
+      - name: Go Tests
+        run: go test -v ./...
