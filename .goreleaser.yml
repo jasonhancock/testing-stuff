@@ -1,8 +1,8 @@
 # Build customization
-project_name: nsk
+project_name: foo
 builds:
   - main: cmd/foo/main.go
-    binary: nsk
+    binary: foo
     goos:
       - darwin
       - linux
