@@ -1,0 +1,16 @@
+# Build customization
+project_name: nsk
+builds:
+  - main: cmd/foo/main.go
+    binary: nsk
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+# Archive customization
+archive:
+  format: tar.gz
+  replacements:
+    amd64: 64-bit
+    darwin: macOS
