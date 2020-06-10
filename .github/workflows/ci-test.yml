@@ -18,3 +18,8 @@ jobs:
           go-version: '1.14.x'
       - name: Go Tests
         run: go test -v ./...
+      - name: testing stuff
+        run: env
+        env:
+          A_SECRET: ${{ secrets.A_SECRET }}
+
