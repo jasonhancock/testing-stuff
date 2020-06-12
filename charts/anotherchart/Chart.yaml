@@ -1,0 +1,22 @@
+apiVersion: v2
+name: anotherchart
+version: 0.0.1
+appVersion: v1.1.1
+kubeVersion: ">= 1.15.0-0 < 2.0.0-0"
+description: This is anotherchart description
+type: application
+keywords:
+  - demo
+  - testing
+home: https://github.com/jasonhancock
+sources:
+  - https://github.com/jasonhancock
+dependencies: []
+maintainers: # (optional)
+  - name: Jason Hancock
+    email: jason@jasonhancock.com
+    url: https://jasonhancock.com
+icon: https://avatars3.githubusercontent.com/u/1113245
+deprecated: false
+annotations:
+  example: A list of annotations keyed by name (optional).
