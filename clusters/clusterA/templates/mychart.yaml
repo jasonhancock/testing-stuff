@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: clusterA-mychart
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: cluster-bootstrap-clusterA
+  source:
+    path: charts/mchart
+    repoURL: https://github.com/jasonhancock/testing-stuff.git
+    targetRevision: HEAD
+    helm:
+      values: |
+        favoriteDrink: beer
+        pizzaToppings:
+          - pineapple
+          - ham
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
