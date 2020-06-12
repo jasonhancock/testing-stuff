@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: clusterA-mychart
+  name: cluster-a-mychart
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: cluster-bootstrap-clusterA
+  project: cluster-bootstrap-cluster-a
   source:
     path: charts/mchart
     repoURL: https://github.com/jasonhancock/testing-stuff.git
