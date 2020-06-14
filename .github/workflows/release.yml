@@ -24,3 +24,6 @@ jobs:
           args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: stuff
+        run: echo $GITHUB_RUN_ID $GITHUB_RUN_NUMBER
+
