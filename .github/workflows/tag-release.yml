@@ -13,19 +13,23 @@ jobs:
       - name: Unshallow
         run: git fetch --prune --unshallow
 
-      - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.22.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: true
+      - name: create tag
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git tag -a v0.5.${{ github.run_number }} -m v0.5.${{ github.run_number }}
+          git push origin v0.5.${{ github.run_number }}
+
+        #      - name: Bump version and push tag
+        #uses: anothrNick/github-tag-action@1.22.0
+        #env:
+        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #  WITH_V: true
 
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
           go-version: 1.14.x
-
-      - name: sleep
-        run: sleep 15
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
