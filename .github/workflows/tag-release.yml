@@ -13,5 +13,5 @@ jobs:
       uses: tvdias/github-tagger@v0.0.1
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        tag: "v0.1.$GITHUB_RUN_NUMBER"
+        tag: v0.1.$GITHUB_RUN_NUMBER
 
