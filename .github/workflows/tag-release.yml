@@ -1,0 +1,17 @@
+name: tag-release
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  tagrelease:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Tag commit
+      uses: tvdias/github-tagger@v0.0.1
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        tag: "v0.1.$GITHUB_RUN_NUMBER"
+
