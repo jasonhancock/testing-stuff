@@ -18,3 +18,5 @@ jobs:
           go-version: '1.14.x'
       - name: Go Tests
         run: go test -v ./...
+      - name: stuff
+        run: echo $GITHUB_RUN_ID $GITHUB_RUN_NUMBER
