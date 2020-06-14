@@ -1,17 +1,17 @@
 name: tag-release
-
 on:
   push:
     branches:
-      - 'master'
-
+      - master
 jobs:
-  tagrelease:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Tag commit
-      uses: tvdias/github-tagger@v0.0.1
+    - uses: actions/checkout@master
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        tag: v0.1.${{ github.run_number }}
-
+        fetch-depth: '0'
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@1.22.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WITH_V: true
