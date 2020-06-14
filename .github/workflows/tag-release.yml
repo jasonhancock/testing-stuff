@@ -24,6 +24,9 @@ jobs:
         with:
           go-version: 1.14.x
 
+      - name: sleep
+        run: sleep 15
+
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
         with:
