@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: cluster-bootstrap-cluster-a
+  project: default
   source:
     path: charts/anotherchart
     repoURL: https://github.com/jasonhancock/testing-stuff.git
