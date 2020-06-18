@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: testing-stuff/charts/namespaces
+    path: charts/namespaces
     repoURL: https://github.com/jasonhancock/testing-stuff.git
     targetRevision: HEAD
     helm:
