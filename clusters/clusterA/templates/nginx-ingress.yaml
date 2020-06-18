@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: nginx-ingress
+    chart: nginx-ingress
     repoURL: https://kubernetes-charts.storage.googleapis.com
   syncPolicy:
     automated:
