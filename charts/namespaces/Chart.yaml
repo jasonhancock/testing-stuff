@@ -1,0 +1,6 @@
+apiVersion: v1
+name: namespaces
+description: Create one or more namespaces
+type: application
+version: 0.0.1
+appVersion: 0.0.1
