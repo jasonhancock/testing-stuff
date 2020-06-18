@@ -13,6 +13,7 @@ spec:
   source:
     chart: nginx-ingress
     repoURL: https://kubernetes-charts.storage.googleapis.com
+    targetRevision: 1.40.1
   syncPolicy:
     automated:
       prune: true
