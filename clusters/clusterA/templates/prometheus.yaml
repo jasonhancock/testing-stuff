@@ -14,6 +14,10 @@ spec:
     chart: prometheus-operator
     repoURL: https://kubernetes-charts.storage.googleapis.com
     targetRevision: 8.7.0
+    helm:
+      values: |
+{{ include "clustera.prometheus.values" . | indent 8 }}
+
   syncPolicy:
     automated:
       prune: true

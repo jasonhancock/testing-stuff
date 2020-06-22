@@ -1,0 +1,4 @@
+{{- define "clustera.prometheus.values" -}}
+namespaces:
+  - prometheus
+{{- end -}}
