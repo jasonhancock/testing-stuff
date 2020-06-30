@@ -11,15 +11,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: charts/nginx-ingress
-    repoURL: https://github.com/jasonhancock/testing-stuff.git
-    targetRevision: HEAD
-    helm:
-      values: |
-        cluster: clustera
-        project: default
-        server: https://kubernetes.default.svc
-        version: 1.40.1
+    chart: nginx-ingress
+    repoURL: https://kubernetes-charts.storage.googleapis.com
+    targetRevision: 1.40.1
   syncPolicy:
     automated:
       prune: true

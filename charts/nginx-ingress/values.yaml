@@ -1,0 +1,4 @@
+cluster: somecluster
+project: default
+server: https://kubernetes.default.svc
+version: 1.40.1
