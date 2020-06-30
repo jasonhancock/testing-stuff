@@ -11,7 +11,7 @@ controller:
   nodeSelector:
     node-role.kubernetes.io/ingress: ingress
   metrics:
-    enabled: true
+    enabled: {{ .Values.metrics_enabled }}
     service:
       annotations:
         prometheus.io/scrape: "true"

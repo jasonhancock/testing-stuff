@@ -1,4 +1,5 @@
 cluster: somecluster
+metrics_enabled: false
 project: default
 server: https://kubernetes.default.svc
 version: 1.40.1
